@@ -20,9 +20,8 @@ jobs:
           [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
           nvm install 16
           nvm use v16
-          npm install -g yarn
-          yarn install --offline
-          yarn run build
+          npm install
+          npm run build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
