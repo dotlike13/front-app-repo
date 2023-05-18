@@ -18,13 +18,11 @@ jobs:
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-          nvm install 12
-          nvm use v12
+          nvm install 16
+          nvm use v16
           npm install -g yarn
           yarn install --offline
-
-      - name: yarn build
-        run: yarn run build
+          yarn run build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
